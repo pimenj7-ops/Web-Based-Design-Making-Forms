@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Making Forms</title>
+<style>
+	@font-face {
+		font-family: Candara;
+		src: url("Candara.ttf");
+	} h1 {
+		text-align: center;
+		font-weight: normal;
+	} form {
+		width: 600px;
+		min-height: 600px;
+		padding: 24px;
+		background: gold;
+		margin: 36px auto;
+		border: 1px solid goldenrod;
+		box-shadow: 2px 3px 6px goldenrod;
+		border-radius: 18px;
+		font: 14pt/1.2em Candara;
+	} fieldset {
+		margin-top: 18px;
+	} #personal input, #submit {
+		width: 100%;
+		height: 24px;
+		margin-bottom: 12px;
+	} input[type="text"] {
+		width: 98%;
+		font: 12pt/1.4em Roboto;
+		padding: 2px;
+	} select {
+		width: 50px;
+		font: 12pt/1.4em Roboto;
+		padding: 3px 6px;
+	} textarea {
+		width: 98%;
+		font: 12pt/1.4em Roboto;
+	} input[type="submit"] {
+		width: 100px;
+		height: 40px;
+		background: lightgreen;
+		font: bold 12pt/1.4em Roboto;
+		display: block;
+		margin: 12px auto;
+		border-radius: 6px;
+		border: 1px solid gray;
+	} input[type="submit"]:hover {
+		box-shadow: 2px 3px 6px gray;
+	} label {
+		margin-bottom: 12px;
+	}
+</style>
+</head>
+
+<body>
+	<form action="#" method="post">
+	<h1>Contact Us</h1>
+	<input type="text" /><br/>
+	<label>First Name</label><br/>
+	<input type="text" /><br/>
+	<label>Last Name</label><br/>
+	<input type="text" /><br/>
+	<label>Email</label><br/>
+	<fieldset>
+	<legend>What is your operating system?</legend>
+	<input type="radio" name="os"> <label>MacOS</label><br/>
+	<input type="radio" name="os"> <label>Windows</label><br/>
+	<input type="radio" name="os"> <label>UNIX</label><br/>
+	</fieldset>
+	<fieldset>
+	<legend>What services are you interested in?</legend>	
+	<input type="checkbox">
+	<label>Check/Uncheck All</label><br/>
+	<input type="checkbox" />
+	<label>Design</label><br/>
+	<input type="checkbox" />
+	<label>UX/UI</label><br/>
+	<input type="checkbox" />
+	<label>Consulting</label><br/>
+	<input type="checkbox" />
+	<label>Other</label><br/>
+	</fieldset>
+	<fieldset>
+	<legend>What is your timeframe?</legend>
+	<select>
+		<option>This Week</option>
+		<option>This Month</option>
+		<option>This Year</option>
+		<option>Unsure</option>
+	</select>
+	</fieldset><br/>
+	<label>Message</label><br/>
+	<textarea placeholder="Place message here."></textarea><br/>
+	<input type="submit" value="Submit" />
+	</form>
+</body>
+</html>
